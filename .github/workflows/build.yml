@@ -20,6 +20,19 @@ jobs:
       - name: Grant execute permission
         run: chmod +x gradlew
 
+      - name: Inspect wrapper
+        run: |
+          echo "=== Wrapper Directory ==="
+          ls -lah gradle/wrapper
+
+          echo ""
+          echo "=== File Type ==="
+          file gradle/wrapper/gradle-wrapper.jar
+
+          echo ""
+          echo "=== SHA256 ==="
+          sha256sum gradle/wrapper/gradle-wrapper.jar
+
       - name: Build Debug APK
         run: ./gradlew assembleDebug
 
