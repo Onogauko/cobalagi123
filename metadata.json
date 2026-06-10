@@ -1,0 +1,6 @@
+{
+  "name": "Sales Data Explorer",
+  "description": "App to import, search, analyze, and monitor sales data from Excel files and scan barcodes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Subtle Background Sheet (Excel/Report File container) -->
+    <path
+        android:pathData="M32,24h32l16,16v40c0,2.2-1.8,4-4,4H32c-2.2,0-4-1.8-4-4V28C28,25.8 29.8,24 32,24z"
+        android:strokeWidth="2.5"
+        android:strokeColor="#50FFFFFF">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="28"
+                android:startY="24"
+                android:endX="80"
+                android:endY="84"
+                android:type="linear">
+                <item android:color="#20FFFFFF" android:offset="0.0"/>
+                <item android:color="#00FFFFFF" android:offset="1.0"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Folded Ear corner -->
+    <path
+        android:pathData="M64,24v16h16"
+        android:strokeWidth="2.5"
+        android:strokeColor="#50FFFFFF"
+        android:fillColor="#00000000" />
+
+    <!-- Excel visual indicator: A vibrant light-green Excel indicator -->
+    <path
+        android:pathData="M28,34 C28,34 36,34 40,34 L40,46"
+        android:strokeWidth="3.5"
+        android:strokeColor="#33C151"
+        android:strokeLineCap="round"/>
+
+    <!-- Dynamic analytics bar chart paths - 3 bars with vibrant primary/accent gradients -->
+    <!-- Bar 1 (Left): X=42. Height=22 -->
+    <path
+        android:pathData="M42,74 L42,52"
+        android:strokeWidth="7"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="42"
+                android:startY="74"
+                android:endX="42"
+                android:endY="52"
+                android:type="linear">
+                <item android:color="#90CAF9" android:offset="0.0"/>
+                <item android:color="#42A5F5" android:offset="1.0"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Bar 2 (Middle): X=54. Height=32 -->
+    <path
+        android:pathData="M54,74 L54,42"
+        android:strokeWidth="7"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="54"
+                android:startY="74"
+                android:endX="54"
+                android:endY="42"
+                android:type="linear">
+                <item android:color="#4FC3F7" android:offset="0.0"/>
+                <item android:color="#00B0FF" android:offset="1.0"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Bar 3 (Right): X=66. Height=42 -->
+    <path
+        android:pathData="M66,74 L66,32"
+        android:strokeWidth="7"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="66"
+                android:startY="74"
+                android:endX="66"
+                android:endY="32"
+                android:type="linear">
+                <item android:color="#81C784" android:offset="0.0"/>
+                <item android:color="#2E7D32" android:offset="1.0"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Modern glowing trend-line tracing over the bars to show progression -->
+    <path
+        android:pathData="M34,60 L45,54 L56,43 L68,31 L78,35"
+        android:strokeWidth="3.5"
+        android:strokeColor="#FFB300"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Trendy nodes for the trend line -->
+    <!-- Dot at (45, 54) -->
+    <path
+        android:pathData="M45,54 m-2,0 a2,2 0 1,1 4,0 a2,2 0 1,1 -4,0"
+        android:fillColor="#FFD54F" />
+    <!-- Dot at (56, 43) -->
+    <path
+        android:pathData="M56,43 m-2,0 a2,2 0 1,1 4,0 a2,2 0 1,1 -4,0"
+        android:fillColor="#FFD54F" />
+    <!-- Node at (78, 35) -->
+    <path
+        android:pathData="M78,35 m-3,0 a3,3 0 1,1 6,0 a3,3 0 1,1 -6,0"
+        android:fillColor="#FFA000" />
+
+</vector>
