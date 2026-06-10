@@ -8,36 +8,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Java
+      - name: Setup Java 21
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: 21
 
-      - name: Grant execute permission
-        run: chmod +x gradlew
+      - name: Show project files
+        run: |
+          pwd
+          find . -type f | sort
 
       - name: Inspect wrapper
         run: |
-          echo "=== Wrapper Directory ==="
           ls -lah gradle/wrapper
+          file gradle/wrapper/gradle-wrapper.jar || true
+          sha256sum gradle/wrapper/gradle-wrapper.jar || true
 
-          echo ""
-          echo "=== File Type ==="
-          file gradle/wrapper/gradle-wrapper.jar
+      - name: Test wrapper jar
+        run: |
+          jar tf gradle/wrapper/gradle-wrapper.jar | head -20
 
-          echo ""
-          echo "=== SHA256 ==="
-          sha256sum gradle/wrapper/gradle-wrapper.jar
-
-      - name: Build Debug APK
-        run: ./gradlew assembleDebug
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-debug
-          path: app/build/outputs/apk/debug/*.apk
+      - name: Run Gradle
+        run: |
+          chmod +x gradlew
+          ./gradlew --version
